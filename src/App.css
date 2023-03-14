@@ -8,8 +8,17 @@
 
 h1 {
   font-size: 120px;
-  background: linear-gradient(to right top, #01f822, #08611b);
+  background: linear-gradient(to right top, #97b6da, #0024f0);
   color: transparent;
   -webkit-background-clip: text;
-  
+}
+
+.header a {
+  color:beige;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.header a:hover {
+  color: aquamarine;
 }

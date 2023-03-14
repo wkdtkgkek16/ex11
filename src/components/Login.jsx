@@ -36,9 +36,9 @@ const Login = ({history}) => {
                     </Card.Title>
                     <Card.Body>
                         <Form className='mb-2' onSubmit={onSubmit}>
-                            <Form.Control placeholder='✉Email' className='mb-3'
+                            <Form.Control placeholder='✉  Email' className='mb-3'
                                 name="email" onChange={onChange} value={email}/>
-                            <Form.Control placeholder='Password' className='mb-3'
+                            <Form.Control placeholder='🔒 Password' className='mb-3'
                                 type='password' value={password}
                                 name="password" onChange={onChange}/>
                             <Button type="submit" variant='primary' style={{width:'100%'}}>로그인</Button>
