@@ -20,7 +20,7 @@ const Header = ({history}) => {
           <Navbar.Brand href="/">인천일보</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#features">회원목록</Nav.Link>
+            <Nav.Link href="/users">회원목록</Nav.Link>
             {email ? 
                 <Nav.Link href="/logout" onClick={onLogout}>로그아웃</Nav.Link>
                 :
