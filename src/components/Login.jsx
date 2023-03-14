@@ -5,6 +5,8 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { Link } from 'react-router-dom'
 
 const Login = ({history}) => {
+    
+    const [loading, setLoading] = useState(false);
     const auth = getAuth(app);
     const [form, setForm] = useState({
         email: 'user01@email.com',
@@ -15,17 +17,22 @@ const Login = ({history}) => {
     }
     const {email, password} = form;
     const onSubmit = (e) => {
+        setLoading(true);
         e.preventDefault();
         signInWithEmailAndPassword(auth,email,password)
         .then((success)=>{
             alert('로그인성공')
             sessionStorage.setItem('email',email);
+            setLoading(false);
             history.push('/');
         })
         .catch((error)=>{
+            
             alert("실패"+error.message);
+            setLoading(false);
         })
     }
+    if(loading) return <h1> Loading...</h1>
     return (
         <div>
             <Row className='my-5 justify-content-center'>
